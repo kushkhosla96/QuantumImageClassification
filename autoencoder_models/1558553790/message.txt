@@ -1,0 +1,4 @@
+
+This was the first model that seemed to work. Loss started at about .231 and went to .219 after 100 epcohs.
+however, the generated images don't look too bad.
+

@@ -1,0 +1,2 @@
+This used the encoder from 1558553790.
+with 25 epochs it managed to get 78% accuracy.

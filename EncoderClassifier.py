@@ -4,11 +4,11 @@ import torch.nn as nn
 
 class EncoderClassifier(nn.Module):
 	
-	def __init__(self, encoder):
+	def __init__(self, encoder, encoding_size):
 		super(EncoderClassifier, self).__init__()
 
 		self.encoder = encoder
-		self.encoding_size = encoder.get_encoding_size()
+		self.encoding_size = encoding_size
 
 		for child in self.encoder.children():
 			for param in child.parameters():

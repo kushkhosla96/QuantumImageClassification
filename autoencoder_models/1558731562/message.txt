@@ -1,0 +1,2 @@
+This model only uses an encoding size of 10. does not to too poorly, but we will put in
+an EncoderClassifier and see how it does.

@@ -15,7 +15,7 @@ class AutoEncoder(nn.Module):
 		for i in range(len(self.layer_sizes) - 1):
 			encoder_modules.append(nn.Linear(self.layer_sizes[i], self.layer_sizes[i+1]))
 			encoder_modules.append(nn.ReLU(True))			
-		self.encoder = nn.Sequential(*modules)	
+		self.encoder = nn.Sequential(*encoder_modules)	
 
 		decoder_modules = []
 		for i in range(len(self.layer_sizes) - 1, 0, -1):

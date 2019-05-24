@@ -8,13 +8,14 @@ class EncoderClassifier(nn.Module):
 		super(EncoderClassifier, self).__init__()
 
 		self.encoder = encoder
+		self.encoding_size = encoder.get_encoding_size()
 
 		for child in self.encoder.children():
 			for param in child.parameters():
 				param.requires_grad = False
 
 		self.classifier = nn.Sequential(
-			nn.Linear(16, 1000),
+			nn.Linear(self.encoding_size, 1000),
 			nn.Dropout(),
 			nn.Linear(1000, 10))
 

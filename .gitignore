@@ -3,3 +3,4 @@ data/
 .ipynb_checkpoints/
 .DS_Store
 autoencoder_models/.DS_Store
+pennylane-forest/
